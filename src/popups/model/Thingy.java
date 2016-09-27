@@ -40,6 +40,4 @@ public class Thingy
 		this.isValid = isValid;
 	}
 	
-	
-	
 }
