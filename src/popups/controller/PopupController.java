@@ -81,5 +81,6 @@ public class PopupController
 		Thingy testThingy = new Thingy();
 		thingyList.add(testThingy);
 		display.displayMessage(thingyList.size() + " is the size of the list.");
+		testThingy.setValue(12.1);
 	}
 }
