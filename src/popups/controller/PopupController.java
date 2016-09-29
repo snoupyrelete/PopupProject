@@ -39,15 +39,32 @@ public class PopupController
 			double test = Double.parseDouble(potentialValue);
 			isParseable = true;
 		}
-		catch (NumberFormatException notDouble)
+		catch(NumberFormatException notDouble)
 		{
+			display.displayMessage(notDouble.getMessage());
 			display.displayMessage("This is not a double value.");
 		}
 		
 		return isParseable;
 	}
-	private int isInteger(String potentialValue);
+	/**
+	 * Checks that the supplied string is parable to an integer value.
+	 * @param potentialNumber The string to test for parsing.
+	 * @return Whether it could be parsed as an integer. 
+	 */
+	private boolean isInteger(String potentialNumber)
 	{
-		boolean 
+		boolean isParseable = false;
+		try 
+		{
+			int test = Integer.parseInt(potentialNumber);
+			isParseable = true;
+		}
+		catch(NumberFormatException notInt)
+		{
+			display.displayMessage(notInt.getMessage());
+			display.displayMessage("Type in an integer next time!");
+		}
+		return isParseable;
 	}
 }
