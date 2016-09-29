@@ -1,6 +1,7 @@
 package popups.view;
 
 import javax.swing.JOptionPane;
+
 /**
  * Popup Viewer class
  * @author Dylan Robson

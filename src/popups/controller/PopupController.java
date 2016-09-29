@@ -1,18 +1,29 @@
 package popups.controller;
 
 import popups.view.PopupViewer;
+import popups.model.Thingy;
+import java.util.List;
+import java.util.ArrayList;
 
 public class PopupController
 {
 	
 	private PopupViewer display;
+	private List<Thingy> thingyList;
 	
 	public PopupController()
 	{
+		thingyList = new ArrayList<Thingy>();
 		display = new PopupViewer();
 	}
 	
 	public void start()
+	{
+		// testForDoubleInputLoop();
+		learnLists();
+	}
+	
+	private void testForDoubleInputLoop()
 	{
 		String answer = "sample";
 		while (answer != null && !isDouble(answer))
@@ -62,5 +73,13 @@ public class PopupController
 			display.displayMessage("Type in an integer next time!");
 		}
 		return isParseable;
+	}
+	
+	private void learnLists()
+	{
+		display.displayMessage(thingyList.size() + " is the size of the list.");
+		Thingy testThingy = new Thingy();
+		thingyList.add(testThingy);
+		display.displayMessage(thingyList.size() + " is the size of the list.");
 	}
 }
