@@ -15,16 +15,12 @@ public class PopupController
 	public void start()
 	{
 		String answer = "sample";
-		while (answer != null && !answer.equals(""))
+		while (answer != null && !isDouble(answer))
 		{
-			
-			display.displayMessage("Hello!");
-			answer = display.collectResponse("Is kaden dumb?");
-			display.displayMessage(answer + " is what you said.");
-			display.collectOption("Is Kaden stupid?");
-		
+			answer = display.collectResponse("Give me a number.");
 		}
 	}
+	
 	/**
 	 * Checks if the supplied string can be parsed to a double value.
 	 * @param potentialValue The string to test.
@@ -41,14 +37,14 @@ public class PopupController
 		}
 		catch(NumberFormatException notDouble)
 		{
-			display.displayMessage(notDouble.getMessage());
 			display.displayMessage("This is not a double value.");
 		}
 		
 		return isParseable;
 	}
+	
 	/**
-	 * Checks that the supplied string is parable to an integer value.
+	 * Checks if the supplied string can be parsed to an integer value.
 	 * @param potentialNumber The string to test for parsing.
 	 * @return Whether it could be parsed as an integer. 
 	 */
