@@ -97,10 +97,10 @@ public class PopupController
 //		Thingy temp = thingyList.get(4);
 //		temp.setWords("#SWAG");
 //		
-//		for (int index = 0; index < thingyList.size(); index ++)
-//		{
-//			display.displayMessage(thingyList.get(index).getWords());
-//		}
+		for (int index = 0; index < thingyList.size(); index ++)
+		{
+			display.displayMessage(thingyList.get(index).getWords());
+		}
 //		
 //		thingyList.add(3, new Thingy());
 //		
@@ -120,10 +120,15 @@ public class PopupController
 //			display.displayMessage(thingyList.get(index).getWords());
 //		}
 //		
-//		for (Thingy currentThingy : thingyList)
-//		{
-//			display.displayMessage(currentThingy.getWords());
-//		}
+		for (Thingy currentThingy : thingyList)
+		{
+			display.displayMessage(currentThingy.getWords());
+		}
+		
+		for (Thingy currentThingy : thingyList)
+		{
+			display.collectResponse("How are you?");
+		}
 		
 		String indexToChange = "ABC";
 		String whatToChangeTo = "XYZ";
